@@ -1,4 +1,5 @@
-# Vendure Angular Storefront
+# Ubek Angular Storefront
+> Questa PWA estende e personalizza lo starterkit fornito da Vendure.
 
 This is an e-commerce storefront application which is designed to be used with the [Vendure ecommerce framework](https://github.com/vendure-ecommerce/vendure) as a back end.
 
