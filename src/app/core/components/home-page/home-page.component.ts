@@ -19,6 +19,15 @@ export class HomePageComponent implements OnInit {
     collections$: Observable<GetCollectionsQuery['collections']['items']>;
     heroImage: SafeUrl;
 
+    //form fields
+      // Dati per le opzioni
+    carBrands: any[] = ["Brand1","Brand2","Brand3"];
+    carModels: any[] = ["Model1","Model2","Model3"];
+    numberPlate: string;
+    
+    selectedBrands: string[] = [];
+    selectedModels: string[] = [];
+
     constructor(private dataService: DataService) {
     }
 
@@ -27,12 +36,28 @@ export class HomePageComponent implements OnInit {
             options: { take: 50 },
         }).pipe(map(({collections}) => collections.items));
         this.heroImage = this.getHeroImageUrl();
+
+        // this.dataService.getCarBrands().subscribe(data => {
+        //     this.carBrands = data;
+        //   });
+      
+        //   this.preferencesService.getLanguages().subscribe(data => {
+        //     this.languages = data;
+        //   });
+      
+        //   this.preferencesService.getFoods().subscribe(data => {
+        //     this.foods = data;
+        //   });
     }
 
     private getHeroImageUrl(): string {
-        const {apiHost, apiPort} = environment;
-        return `${apiHost}:${apiPort}/assets/preview/a2/thomas-serer-420833-unsplash__preview.jpg`;
+        //const {apiHost, apiPort} = environment;
+        //return `${apiHost}:${apiPort}/assets/preview/a2/thomas-serer-420833-unsplash__preview.jpg`;
+        return "./assets/hero_ubek.png"
     }
+    onSubmit() {
+        alert('Checkbox form submitted!');
+      }
 
 }
 
