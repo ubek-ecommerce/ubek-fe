@@ -39,7 +39,7 @@ export class CollectionsMenuComponent implements OnInit, OnDestroy {
     private overlayIsOpen$ = new Subject<boolean>();
     private setActiveCollection$ = new Subject<TreeNode<CollectionItem>>();
     private destroy$ = new Subject();
-
+    
     constructor(@Inject(DOCUMENT) private document: Document,
                 private dataService: DataService,
                 private overlay: Overlay,
